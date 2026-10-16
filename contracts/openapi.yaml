@@ -1,0 +1,30 @@
+openapi: 3.1.0
+info:
+  title: Mealora API
+  version: 0.0.0
+  description: Bootstrap contract. Nutrition, identity and Agent endpoints are not implemented.
+paths:
+  /api/health:
+    get:
+      operationId: getHealth
+      summary: API process health; independent of database availability
+      responses:
+        '200':
+          description: The API process is responding.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthResponse'
+components:
+  schemas:
+    HealthResponse:
+      type: object
+      additionalProperties: false
+      required: [status, service]
+      properties:
+        status:
+          type: string
+          const: ok
+        service:
+          type: string
+          const: mealora-api

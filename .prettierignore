@@ -1,0 +1,12 @@
+docs/
+node_modules/
+.cache/
+.pnpm-store/
+.expo/
+dist/
+build/
+bin/
+coverage/
+pnpm-lock.yaml
+apps/mobile/ios/
+packages/api-client/src/types/schema.d.ts

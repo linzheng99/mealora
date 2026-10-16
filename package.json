@@ -1,0 +1,30 @@
+{
+  "name": "mealora",
+  "private": true,
+  "packageManager": "pnpm@10.34.7",
+  "engines": {
+    "node": ">=22.14.0 <23",
+    "pnpm": ">=9.11.0"
+  },
+  "scripts": {
+    "dev:mobile": "pnpm --filter @mealora/mobile start",
+    "ios": "pnpm --filter @mealora/mobile ios",
+    "ios:device": "pnpm --filter @mealora/mobile ios:device",
+    "dev:admin": "pnpm --filter @mealora/admin dev",
+    "dev:api": "cd services/api && go run ./cmd/api",
+    "generate:api": "pnpm --filter @mealora/api-client generate",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "lint": "pnpm -r --if-present lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build:admin": "pnpm --filter @mealora/admin build",
+    "export:ios": "pnpm --filter @mealora/mobile export:ios",
+    "build:api": "cd services/api && go build -o ../../bin/mealora-api ./cmd/api",
+    "test:api": "cd services/api && go test ./...",
+    "vet:api": "cd services/api && go vet ./..."
+  },
+  "devDependencies": {
+    "prettier": "3.9.9",
+    "oxlint": "^1"
+  }
+}

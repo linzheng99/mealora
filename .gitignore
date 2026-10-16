@@ -1,0 +1,46 @@
+# Local planning and development records
+/docs/
+
+# Dependencies and package-manager caches; lockfiles remain tracked
+node_modules/
+.pnpm-store/
+.cache/
+.npm/
+
+# Build, test and runtime output
+dist/
+build/
+bin/
+coverage/
+*.tsbuildinfo
+*.log
+*.pid
+.data/
+
+# Environment secrets; commit examples only
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Expo / generated iOS project (Expo config is the source of truth)
+.expo/
+/apps/mobile/ios/
+Pods/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+
+# Signing credentials
+credentials/
+*.p12
+*.p8
+*.key
+*.pem
+*.mobileprovision
+*.provisionprofile
+
+# Machine-specific files
+.DS_Store
+._*
+.idea/

@@ -1,0 +1,22 @@
+{
+  "name": "@mealora/api-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./types": "./src/types/index.ts"
+  },
+  "scripts": {
+    "generate": "openapi-typescript ../../contracts/openapi.yaml -o src/types/schema.d.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "oxlint src --ignore-pattern src/types/schema.d.ts"
+  },
+  "dependencies": {
+    "openapi-fetch": "^0.15"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "openapi-typescript": "7.13.0"
+  }
+}
